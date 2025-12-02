@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { MapPin, Shield, Clock, Users, Camera, Map, Info, CheckCircle, CreditCard, Phone, AlertTriangle, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { config } from "@/config/constants";
 
 
 
@@ -120,9 +121,9 @@ const [paymentProofFile, setPaymentProofFile] = useState<File | null>(null);
 
 
   // Use the same hotelId as in HotelHeader
-  const hotelId = import.meta.env.VITE_HOTEL_ID;
+  const hotelId = config.HOTEL_ID;
 
-  const apiBase = import.meta.env.VITE_API_BASE;
+  const apiBase = config.API_BASE;
 
   // Generate confirmation ID function
   const generateConfirmationId = () => {
@@ -959,7 +960,7 @@ console.log(guestInfo);
                     <div className="space-y-4">
                       <div className="w-full h-96 rounded-lg overflow-hidden border">
                         <iframe
-                          src={import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL}
+                          src={config.GOOGLE_MAPS_EMBED_URL}
                           width="100%"
                           height="100%"
                           style={{ border: 0 }}

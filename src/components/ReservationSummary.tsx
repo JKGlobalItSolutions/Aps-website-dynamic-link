@@ -14,6 +14,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { CheckCircle, XCircle, Loader2 } from "lucide-react";
+import { config } from "@/config/constants";
 
 interface GuestInfo {
   firstName: string;
@@ -108,7 +109,7 @@ export const ReservationSummary = ({
 
 
 
-  const apiBase = import.meta.env.VITE_API_BASE;
+  const apiBase = config.API_BASE;
 
 
 

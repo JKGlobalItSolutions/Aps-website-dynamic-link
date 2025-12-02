@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
+import { config } from "@/config/constants";
 
 const HotelHeader: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -14,8 +15,8 @@ const HotelHeader: React.FC = () => {
 
 
 
-const hotelId = import.meta.env.VITE_HOTEL_ID;
-const apiBase = import.meta.env.VITE_API_BASE 
+const hotelId = config.HOTEL_ID;
+const apiBase = config.API_BASE;
 
 
 

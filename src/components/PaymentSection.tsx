@@ -22,6 +22,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import QRCode from "react-qr-code";
+import { config } from "@/config/constants";
 
 interface PaymentSectionProps {
   paymentMethod: string;
@@ -40,8 +41,8 @@ export const PaymentSection = ({
 }: PaymentSectionProps) => {
   const [showQr, setShowQr] = useState(false);
 
-  // ✅ UPI ID from .env
-  const upiId = import.meta.env.VITE_UPI_ID as string;
+  // ✅ UPI ID from config
+  const upiId = config.UPI_ID;
 
   const paymentMethods = [
     {
